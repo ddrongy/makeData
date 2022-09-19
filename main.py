@@ -6,7 +6,7 @@ import json
 if 'num' not in st.session_state:
     st.session_state.num = 1
     st.session_state.strIdx = 0
-    st.session_state.endIdx = 9
+    st.session_state.endIdx = 10
 if 'data' not in st.session_state:
     st.session_state.data = []
 
@@ -47,8 +47,7 @@ def main():
                     #     'id': num, 'name': new_student.name, 'age': new_student.age})
                     for i in range(10):
                         if locals()['option_'+str(i)]:
-                            print(i)
-                            st.session_state.data.append({'foodname': receipt_name[i]})
+                            st.session_state.data.append({'foodname' : receipt_name[i]})
                     st.session_state.num += 1
                     st.session_state.strIdx += 10
                     st.session_state.endIdx += 10
